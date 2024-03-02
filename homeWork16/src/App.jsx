@@ -1,5 +1,5 @@
 import Dashboard from "./components/Dashboard"
-import "./styles/App.css"
+import "./styles/main.css"
 
 const  App=()=> {
   return (

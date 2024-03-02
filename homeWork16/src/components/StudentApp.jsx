@@ -1,8 +1,10 @@
 import { useState } from "react"
 import StudentList from "./StudentList"
+import AddStudent from "./AddStudent"
+import initialStudents  from "../data/students"
 
 const StudentApp=()=>{
-    const [student,setStudent]=useState([])
+    const [students,setStudents]=useState(initialStudents)
     const addStudent=(name,age,major,university,averageGrade)=>{
         const newStudent={
             id:1,
@@ -12,12 +14,14 @@ const StudentApp=()=>{
             university,
             averageGrade
         }
+        const updatedStudents = [...students, newStudent];
 
-        setStudent((prev)=>[newStudent,...prev])
+        setStudents(updatedStudents);
     }
     return(
         <>
-        <StudentList/>
+        <StudentList students={students }/>
+        <AddStudent addStudent={addStudent}/>
         </>
     )
 }

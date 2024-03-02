@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
-import './index.css'
+import "./styles/main.css"
 import Header from "./components/Header"
 import Title from "./components/Title.jsx"
 import Footer from './components/Footer.jsx'

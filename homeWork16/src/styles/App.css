@@ -42,14 +42,14 @@ body{
     line-height: 2;
 }
 
-.students-table,
+/* .students-table,
 tr,
 th {
     border: 1px solid gray;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     text-align: center;
     line-height: 2;
-}
+} */
 
 
 .footer{

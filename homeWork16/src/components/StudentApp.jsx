@@ -18,9 +18,14 @@ const StudentApp=()=>{
 
         setStudents(updatedStudents);
     }
+
+    const removeStudent=(studentId)=>{
+        const updatedStudents=students.filter((student)=>student.id!==studentId)
+        setStudents(updatedStudents)
+    }
     return(
         <>
-        <StudentList students={students }/>
+        <StudentList students={students} removeStudent={removeStudent}/>
         <AddStudent addStudent={addStudent}/>
         </>
     )

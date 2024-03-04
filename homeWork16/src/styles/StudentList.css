@@ -1,0 +1,9 @@
+.table th {
+    width: 25%;
+    border: 1px solid gray;
+    background-color: green;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    line-height: 1.5;
+}

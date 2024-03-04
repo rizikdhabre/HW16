@@ -1,28 +1,29 @@
 import React from "react";
+import Student from "./Student";
 
-const StudentList = ({ students }) => {
+const StudentList = ({ students , removeStudent }) => {
   return (
-    <table className="students-table">
-      <thead className="table-Head">
-        <tr>
-          <th>Name</th>
-          <th>Age</th>
-          <th>Major</th>
-          <th>University</th>
-          <th>Average Grade</th>
-        </tr>
-      </thead>
-      <tbody>
-        {students.map((user) => (
-          <tr key={user.id}>
-            <td>{user.name}</td>
-            <td>{user.age}</td>
-            <td>{user.major}</td>
-            <td>{user.university}</td>
-            <td>{user.averageGrade}</td>
-          </tr>
-        ))}
-      </tbody>
+    <table className="table">
+      {students.length > 0 ? (
+        <React.Fragment>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Age</th>
+              <th>Major</th>
+              <th>University</th>
+              <th>Average Grade</th>
+            </tr>
+          </thead>
+          <tbody>
+            {students.map((student) => (
+              <Student key={student.id} student={student} removeStudent={removeStudent} />
+            ))}
+          </tbody>
+        </React.Fragment>
+      ) : (
+        <p>No Student Yet</p>
+      )}
     </table>
   );
 };

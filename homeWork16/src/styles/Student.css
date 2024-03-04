@@ -1,0 +1,14 @@
+.students-table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+
+
+.students-table td {
+    width: 20%; /* Adjust the width as needed */
+    border: 1px solid gray;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    line-height: 2;
+}

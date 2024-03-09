@@ -12,7 +12,7 @@ const AddStudent = ({ addStudent }) => {
   const [newStudent, setNewStudent] = useState(emptyStudent);
   const handleAddStudent = (e) => {
     e.preventDefault();
-    const { id, name, age, major, university, averageGrade } = newStudent;
+    const {  name, age, major, university, averageGrade } = newStudent;
     if (!name || !age || !major || !university || !averageGrade) return;
     addStudent(name, age, major, university, averageGrade);
   };

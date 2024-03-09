@@ -1,0 +1,24 @@
+.register-container {
+    max-width: 700px;
+    padding: 50px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: whitesmoke;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  button.btn-register {
+    background-color: blue;
+    color: #fff;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Courier New', Courier, monospace;
+  }
+  
+  button.btn-register:hover {
+    background-color:black;
+  }
+  

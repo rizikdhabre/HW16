@@ -3,4 +3,9 @@
 @import "./App.css";
 @import "./AddStudent.css";
 @import "./Student.css";
-@import "./StudentList.css"
+@import "./StudentList.css";
+@import "./Header.css";
+@import "./LoginForm.css";
+@import "./RegisterForm.css";
+@import "./Dashboard.css";
+@import "./Footer.css";

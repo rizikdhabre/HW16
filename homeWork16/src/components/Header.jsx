@@ -1,9 +1,17 @@
 import App from "../App"
-const Header=()=>{
+const Header=({loggedInUser,handleLogout})=>{
     return(
-        <div className="header">
-            <p>Students</p>
-        </div>
+        <header>
+            <h2>Students</h2>
+            <div className="user-info">
+                {loggedInUser?(
+                    <>
+                    <h4>welcome, {loggedInUser.username}</h4>
+                    <button className="logout-btn" onClick={()=>{handleLogout()}}>Logout</button>
+                    </>
+                ):(null)}
+            </div>
+        </header>
     )
 }
 

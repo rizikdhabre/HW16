@@ -1,0 +1,79 @@
+
+  .login-container {
+    max-width:700px;
+    padding: 50px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: whitesmoke;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    text-align: center;
+    color: #333;
+    font-family: 'Courier New', Courier, monospace;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .input-wrapper {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    margin-bottom: 8px;
+    color: #333;
+    font-family: 'Courier New', Courier, monospace;
+  }
+  
+  input {
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: 'Courier New', Courier, monospace;
+  }
+  
+  button.btn-login {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Courier New', Courier, monospace;
+  }
+  
+  button.btn-login:hover {
+    background-color: #0056b3;
+  }
+  
+  .auth-switch {
+    margin-top: 15px;
+    text-align: center;
+    color: #333;
+    font-family: 'Courier New', Courier, monospace;
+  }
+  
+  .auth-switch p {
+    margin-bottom: 5px;
+  }
+  
+  .auth-switch button {
+    background: none;
+    border: none;
+    color: #007bff;
+    cursor: pointer;
+    text-decoration: underline;
+    font-family: 'Courier New', Courier, monospace;
+  }
+  
+  .auth-switch button:hover {
+    color: #0056b3;
+  }
+  

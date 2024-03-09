@@ -1,0 +1,44 @@
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: black; 
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+  }
+  
+  h2 {
+    margin: 0;
+    text-align: center;
+    color: whitesmoke;
+  }
+  
+  .user-info {
+    display: flex;
+    justify-content: flex-end;
+    color: whitesmoke;
+  }
+  
+  h4 {
+    margin: 0;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+
+  }
+  
+  .logout-btn {
+    padding: 8px 15px;
+    background-color: red;
+    color:whitesmoke;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    &:hover {
+      background-color: green;
+    }
+  }
+  

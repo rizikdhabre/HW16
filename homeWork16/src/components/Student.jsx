@@ -1,5 +1,5 @@
 import Button from "./Button";
-const Student = ({ student, removeStudent }) => {
+const Student = ({ student, removeStudent, updateStudent}) => {
   return (
     <tr className="table-row">
       <td>{student.name}</td>

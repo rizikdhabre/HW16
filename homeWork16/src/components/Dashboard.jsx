@@ -2,7 +2,7 @@ import { useState } from "react"
 import StudentApp from "./StudentApp"
 const Dashboard=()=>{
     return(
-        <div>
+        <div className="dashboard-container">
             <StudentApp/>
         </div>
     )

@@ -1,7 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import Student from "./Student";
+import { UpdateStudent } from "./UpdateStudent";
 
-const StudentList = ({ students , removeStudent  , updateStudent}) => {
+const StudentList = ({ students , removeStudent , setStudents,isAdmin }) => {
+  const [updateState,setUpdateState]=useState(null)
+  const updateDetails=(studentId)=>{
+    setUpdateState(studentId)
+    
+}
   return (
     <table  className="table-container">
       {students.length > 0 ? (
@@ -17,7 +23,8 @@ const StudentList = ({ students , removeStudent  , updateStudent}) => {
           </thead>
           <tbody>
             {students.map((student) => (
-              <Student key={student.id} student={student} removeStudent={removeStudent}  />
+             ( student && updateState===student.id)? <UpdateStudent key={student.id} student={student} students={students} setStudents={setStudents} setUpdateState={setUpdateState}/> :
+              <Student key={student.id} student={student} removeStudent={removeStudent}  updateDetails={updateDetails} isAdmin={isAdmin} />
             ))}
           </tbody>
         </React.Fragment>

@@ -1,5 +1,6 @@
 import { utilService } from "./utilService";
 import { storageService } from "./storageService";
+import axios from "axios"
 function createUser(username, email, passowrd, avatar = "") {
   const newUser = {
     id: utilService.generateId(),
@@ -29,5 +30,15 @@ function logout(){
     storageService.clearAll()
 }
 
+async function fetchAvatar(){
+    try {
+      const URL=`https://randomuser.me/api/`
+      const res=await axios.get(URL)
+    return res
+    } catch (error) {
+        console.log(error)
+    }
+}
 
-export const userService = { createUser, login, logout };
+
+export const userService = { createUser, login, logout,fetchAvatar };

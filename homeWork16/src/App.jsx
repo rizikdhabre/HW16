@@ -12,6 +12,19 @@ import LoginForm from "./components/LoginForm.jsx";
 const App = () => {
   const [loggedInUser, setloggedInUser] = useState(null);
   const [showRegister, setShowRegister] = useState(false);
+  const [avatar,setAvatar]=useState("")
+  const [invalidUser,setinvalidUser]=useState(false)
+
+  useEffect(()=>{
+    const loadData=async()=>{
+      const res= await userService.fetchAvatar()
+      const {data}=res
+      const {results}=data
+      const img=results[0].picture.large
+      setAvatar(img)
+ }
+    loadData()
+  },[])
 
   useEffect(() => {
     const loggedInUser = storageService.getLoggedInUser();
@@ -22,13 +35,12 @@ const App = () => {
 
   const handleAuth = (username, password, isRegister = false, email = "") => {
     if (isRegister) {
-      userService.createUser(username, email, password);
+      userService.createUser(username, email, password,avatar);
       setShowRegister(false);
     } else {
       const user = userService.login(username, password);
       if (!user) {
-        alert("Invalid credentials");
-        setShowRegister(true);
+        setinvalidUser(true) 
         return;
       }
       setloggedInUser(user);
@@ -51,12 +63,13 @@ const App = () => {
           <LoginForm
             handleAuth={handleAuth}
             setShowRegister={setShowRegister}
+            invalidUser={invalidUser}
           />
         )
       ) : (
         <>
           <Header loggedInUser={loggedInUser} handleLogout={handleLogout} /> 
-          <Title />
+          <Title loggedInUser={loggedInUser} />
           <Dashboard />
           <Footer />
         </>

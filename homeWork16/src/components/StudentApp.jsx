@@ -4,6 +4,7 @@ import AddStudent from "./AddStudent"
 import initialStudents  from "../data/students"
 import { storageService } from "../services/storageService"
 import { utilService } from "../services/utilService"
+import Admin from "./Admin"
 
 const StudentApp=()=>{
     const [students,setStudents]=useState(initialStudents)
@@ -36,6 +37,7 @@ const StudentApp=()=>{
         <>
         <StudentList students={students} removeStudent={removeStudent} setStudents={setStudents} isAdmin={isAdmin}/>
         <AddStudent addStudent={addStudent}/>
+        {isAdmin && <Admin/>}
         </>
     )
 }

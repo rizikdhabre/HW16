@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const LoginForm = ({handleAuth,setShowRegister}) => {
+const LoginForm = ({handleAuth,setShowRegister,invalidUser}) => {
     const [username, setUsername]=useState("")
     const [password, setPassword]=useState("")
 
@@ -35,6 +35,7 @@ const LoginForm = ({handleAuth,setShowRegister}) => {
           </div>
           <button className="btn-login">Login</button>
         </form>
+        {invalidUser && <p style={{ color: 'red' }}>Invalid username or password.</p>}
         <div className="auth-switch">
           <p>Dont have an account?{"  "} 
           <button onClick={()=>setShowRegister(true)}>Sign Up</button>

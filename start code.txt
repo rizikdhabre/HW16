@@ -1,1 +1,6 @@
 npm create vite@latest
+
+after Install Dependencies:
+npm install 
+
+after it will work :)
